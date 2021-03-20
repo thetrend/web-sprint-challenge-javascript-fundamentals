@@ -16,9 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
-
-
+// NestedFunction can access internal value because it is a closure, which means it has access to its surrounding environment
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -28,11 +26,20 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  // Start off with an empty counter array
+  let counter = [];
+  // For loop ranging from i (starting at 0) to num, push each iteration of i to counter array until i = num, then push num as i to counter
+  for (let i = 0; i <= num; i++) {
+    counter.push(i);
   }
- 
+  // Let total = reducing counter array to prev value sum + each new value n
+  const total = counter.reduce((sum, n) => {
+    return sum + n;
+  }, 0);
+  return total;
+}
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
