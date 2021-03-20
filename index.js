@@ -96,8 +96,13 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    // Create a new array lowPop using filter on array to only include all animals with a population less than 5
+    const lowPop = array.filter((animal) => {
+      return animal.population < 5;
+    });
+    // return lowPop array
+    return lowPop;
   }
   
 
